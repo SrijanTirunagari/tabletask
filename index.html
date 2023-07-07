@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Details</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h2>Employee Details</h2>
+
+  <table>
+   
+      <tr>
+        <th>User Name</th>
+        <th>User Type</th>
+        <th>Last Accessed Time</th>
+        <th>View</th>
+      </tr>
+      <tr>
+        <td>Srijan</td>
+        <td>HR</td>
+        <td>05-07-2023</td>
+        <td><button class="view-button" onclick="openModal('Srijan', 'HR', '10:30', 'Sinny', '7893397890', 'srijan.tirunagari@gmail.com')">View</button></td>
+      </tr>
+      <tr>
+        <td>Sinny</td>
+        <td>Intern</td>
+        <td>04-07-2023</td>
+        <td><button class="view-button" onclick="openModal('Sinny', 'Intern', '15:45', 'Sinny', '92990255444', 'sinny@gmail.com')">View</button></td>
+      </tr>
+
+      <tr>
+        <td>Niharika</td>
+        <td>Intern</td>
+        <td>05-07-2023</td>
+        <td><button class="view-button" onclick="openModal('Niharika', 'Intern', '17:53', 'Sinny', '9243423234', 'niha@gmail.com')">View</button></td>
+      </tr>
+      
+  </table>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>User Details</h3>
+      <p><strong>User Name:</strong> <span id="modal-username"></span></p>
+      <p><strong>User Type:</strong> <span id="modal-usertype"></span></p>
+      <p><strong>Last Accessed Time:</strong> <span id="modal-lastaccessed"></span></p>
+      <p><strong>Created By:</strong> <span id="modal-createdby"></span></p>
+      <p><strong>Contact No:</strong> <span id="modal-contactno"></span></p>
+      <p><strong>Email Address:</strong> <span id="modal-email"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
